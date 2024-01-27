@@ -20,9 +20,9 @@ def load_image(name, colorkey=False):
     fullname = os.path.join("boom", name)
     try:
         image = pygame.image.load(fullname)
-    except pygame.error, message:
-        print 'No se puede cargar la imagen: ', fullname
-        raise SystemExit, message
+    except pygame.error as message:
+        print ('No se puede cargar la imagen: ', message)
+        #raise SystemExit, message
 
     image = image.convert()
 
